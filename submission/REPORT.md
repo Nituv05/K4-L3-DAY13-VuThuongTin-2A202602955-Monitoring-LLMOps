@@ -108,4 +108,4 @@
 - [x] Trace/prompt evidence thuộc project Langfuse cá nhân và ảnh không lộ key/secret.
 - [x] Suite tests và validators chạy được bằng `.venv/bin/python`; cách chạy app/dashboard đã được mô tả.
 - [x] File nộp không chứa keys/secret của `.env`; file challenge/log runtime/venv được gitignore. PII giả chỉ nằm trong fixtures/evidence kiểm chứng redaction; log validator không phát hiện leak.
-- [ ] URL repo và commit SHA cuối đã được nộp trên LMS/Codelabs.
+- [x] URL repo và commit SHA cuối đã được nộp trên LMS/Codelabs.
