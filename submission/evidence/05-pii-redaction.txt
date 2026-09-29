@@ -1,0 +1,9 @@
+Synthetic input:
+email student@example.com; phone 090 123 4567; CCCD 079123456789; card 4111 1111 1111 1111
+
+Redacted output:
+email [REDACTED_EMAIL]; phone [REDACTED_PHONE_VN]; CCCD [REDACTED_CCCD]; card [REDACTED_CREDIT_CARD]
+
+PII unit tests:
+.....                                                                    [100%]
+5 passed in 0.02s

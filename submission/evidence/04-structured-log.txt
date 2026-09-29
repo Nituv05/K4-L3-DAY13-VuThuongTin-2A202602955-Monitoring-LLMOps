@@ -1,0 +1,20 @@
+$ CP1 runtime log excerpt (content fields omitted)
+{
+  "ts": "2026-09-29T07:56:11.656532Z",
+  "level": "info",
+  "service": "api",
+  "event": "response_sent",
+  "correlation_id": "req-01020304",
+  "user_id_hash": "a70147405627",
+  "session_id": "cp1-session",
+  "feature": "qa",
+  "model": "claude-sonnet-4-5",
+  "env": "dev",
+  "latency_ms": 160,
+  "ttft_ms": 55
+}
+
+HTTP middleware smoke check (in-process TestClient):
+- Valid supplied ID req-01020304 was returned unchanged in the response header and body.
+- Invalid supplied ID was replaced with req-7afe1455; header and body matched.
+- Both requests returned HTTP 200 and a numeric x-response-time-ms header.
