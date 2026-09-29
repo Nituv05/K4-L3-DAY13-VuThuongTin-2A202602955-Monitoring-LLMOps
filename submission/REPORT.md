@@ -4,12 +4,13 @@
 
 ## 1. Thông tin học viên
 
-- **Họ và tên:**
-- **MSSV:**
+- **Họ và tên:** Vu Thuong Tin (theo tên repository; dùng tên không dấu).
+- **MSSV:** `2A202602955`
 - **Lớp:** K4-L3A
-- **Repository URL:**
-- **Commit SHA cuối:**
-- **Challenge ID:**
+- **Repository URL:** [https://github.com/Nituv05/K4-L3A-Day13-VuThuongTin-2A202602955-Monitoring-LLMOps](https://github.com/Nituv05/K4-L3A-Day13-VuThuongTin-2A202602955-Monitoring-LLMOps)
+- **Commit nộp cuối:** [Commit mới nhất trên main](https://github.com/Nituv05/K4-L3A-Day13-VuThuongTin-2A202602955-Monitoring-LLMOps/commit/main). Copy full SHA tại trang commit này hoặc chạy `git rev-parse HEAD` sau khi push.
+- **SHA source đã kiểm chứng:** `4abbf203e5eb972161b73108edbdb48872c1a481` (25 tests pass; commit hồ sơ cuối bổ sung báo cáo/evidence, không đổi source). SHA của chính commit chứa báo cáo không thể được nhúng vào nội dung báo cáo trước khi tạo commit.
+- **Challenge ID:** `day13-k4-l3a-monitoring-llmops-v1`
 - **Tên project Langfuse cá nhân:** `day13-k4-l3a-2A202602955`
 
 ## 2. Evidence index
@@ -18,17 +19,17 @@
 
 | Evidence | Đường dẫn |
 |---|---|
-| Pytest cuối | `evidence/01-pytest.png` |
-| Log validator | `evidence/02-log-validator.txt` |
-| Dashboard validator | `evidence/03-dashboard-validator.txt` |
-| Structured log | `evidence/04-structured-log.txt` |
-| PII redaction | `evidence/05-pii-redaction.txt` |
+| Pytest cuối | [25 tests passed](evidence/01-pytest.txt) |
+| Log validator | [Evidence](evidence/02-log-validator.txt) |
+| Dashboard validator | [Evidence](evidence/03-dashboard-validator.txt) |
+| Structured log | [Evidence](evidence/04-structured-log.txt) |
+| PII redaction | [Evidence](evidence/05-pii-redaction.txt) |
 | Trace list | [Ảnh](evidence/06-trace-list.png), [API](evidence/06-trace-list.json) |
 | Trace waterfall | [Ảnh](evidence/07-trace-waterfall.png), [API](evidence/07-trace-waterfall.json) |
 | Trace metadata | [Generation usage](evidence/08-trace-metadata.png), [Correlation ID](evidence/08-correlation-id.png), [API](evidence/08-trace-metadata.json) |
 | Prompt versions | [Ảnh](evidence/09-prompt-versions.png), [API](evidence/09-prompt-versions.json) |
 | Prompt rollback | [Production v2](evidence/10-production-v2.png), [Sau rollback v1](evidence/10-prompt-rollback.png), [API](evidence/10-prompt-rollback.json) |
-| Dashboard runtime | `evidence/11-dashboard-overview.png` |
+| Dashboard runtime | [Evidence](evidence/11-dashboard-overview.png) |
 | Incident metric | [Ảnh](evidence/12-incident-metric.png), [Số liệu](evidence/12-incident-metric.json) |
 | Incident log | [Ảnh](evidence/13-incident-log.png), [Log](evidence/13-incident-log.txt) |
 | Incident trace | [Ảnh Langfuse](evidence/14-incident-trace.png), [API](evidence/14-incident-trace.json) |
@@ -39,7 +40,7 @@
 |---|---|---|---|
 | `validate_logs.py` | 50/100 trên 42 dòng log đã lưu | 100/100 trên 93 dòng, 39 correlation ID | 20 dòng cũ thiếu trường CP1 đã được tách khỏi log trước khi đo lại |
 | `validate_dashboard.py` | Chưa có runtime dashboard | 6/6 panel | Có runtime HTML và ảnh chụp sáu panel |
-| `pytest` | Chưa chạy baseline | 5 bài test PII CP1 đạt | Chạy `tests/test_pii.py` |
+| `pytest` | Chưa chạy baseline | 25 passed, 0 failed (0.99 s) | Chạy toàn bộ suite; `evidence/01-pytest.txt` |
 | Số traces hợp lệ | Chỉ có root observation | 12 traces / 36 observations | Mỗi trace có AGENT → RETRIEVER + GENERATION |
 | Số PII leak | 0 | 0 | Validator không phát hiện PII trong log |
 | Latency P95 / TTFT P95 | | 786 ms / 55 ms | Snapshot rolling 60 phút, 22 requests |
@@ -50,7 +51,7 @@
 - **Cách tạo/nhận và truyền correlation ID:** Middleware giữ `x-request-id` hợp lệ theo dạng `req-<8-hex>`; nếu thiếu hoặc sai định dạng thì sinh ID mới. ID được bind vào structlog context, trả trong response header `x-request-id`, cùng thời gian xử lý ở `x-response-time-ms`.
 - **Các metadata được ghi vào structured log:** `user_id_hash` (SHA-256 rút gọn, không ghi raw user ID), `session_id`, `feature`, `model` và `env` được bind trước event `request_received`.
 - **Cách bảo đảm PII được scrub trước khi ghi:** Processor chạy sau khi format exception và trước JSONL writer/JSON renderer; scrub đệ quy mọi chuỗi trong event, payload và metadata. Pattern che email, số điện thoại Việt Nam, CCCD 12 số và số thẻ 13–19 số.
-- **Cách kiểm chứng kết quả:** `tests/test_pii.py` đạt 5/5; log validator đạt 100/100, với 0 trường bắt buộc thiếu, 10 correlation ID và 0 PII leak. TestClient xác nhận ID hợp lệ được giữ nguyên, ID sai định dạng được thay bằng ID hợp lệ, và response có hai header yêu cầu. Evidence: `evidence/02-log-validator.txt`, `evidence/04-structured-log.txt`, `evidence/05-pii-redaction.txt`.
+- **Cách kiểm chứng kết quả:** `tests/test_pii.py` đạt 5/5; log validator lần cuối đạt 100/100 trên 93 dòng, với 0 trường bắt buộc thiếu, 39 correlation ID và 0 PII leak. TestClient xác nhận ID hợp lệ được giữ nguyên, ID sai định dạng được thay bằng ID hợp lệ, và response có hai header yêu cầu. Evidence: `evidence/02-log-validator.txt`, `evidence/04-structured-log.txt`, `evidence/05-pii-redaction.txt`.
 
 ## 5. Tracing và prompt versioning
 
@@ -90,20 +91,20 @@
 
 ## 8. Giải thích và tự đánh giá
 
-- **Một quyết định kỹ thuật quan trọng và lý do:**
+- **Một quyết định kỹ thuật quan trọng và lý do:** Chỉ ghi metadata an toàn vào child observations và tắt capture input/output ở root. Retrieval ghi số ký tự query và số tài liệu; generation ghi prompt identifier, token và cost. Cách này vẫn định vị được bước chậm và prompt đã dùng, đồng thời tránh gửi nội dung có PII lên Langfuse.
 - **Một lỗi/blocker đã gặp:** API trace legacy trả 410 cho organization mới.
 - **Cách tìm nguyên nhân và xử lý:** Dùng observations API V2 với filter session/time và chọn field groups metadata/io/model/usage/prompt.
-- **Cách hiểu luồng Metrics → Logs → Traces:**
-- **Vai trò của prompt version, token/cost, SLO hoặc rollback trong vận hành LLM:**
-- **Điều quan trọng nhất đã học:**
-- **Hạn chế hoặc phần chưa hoàn thành, nếu có:** CP2 có API evidence, ảnh dashboard và ảnh UI 06/07/09/10 sau rollback; mục 08 có thêm ảnh correlation ID; đã có ảnh production v2 trước rollback trong thư mục evidence. CP3 đã chạy challenge chính thức, xác định retrieval chậm, kiểm chứng recovery và lưu đủ evidence 12–14.
+- **Cách hiểu luồng Metrics → Logs → Traces:** Metrics xác định khoảng incident và triệu chứng: P95 tăng lên 3372 ms. Trong khoảng đó, log `response_sent` cho request `req-a7eae60b` có latency 3372 ms. Trace cùng correlation ID cho thấy retrieval 2506 ms, generation 157 ms; đối chiếu source xác nhận incident `rag_slow`. Recovery P95 853 ms sau disable là phép kiểm chứng hành động khắc phục.
+- **Vai trò của prompt version, token/cost, SLO hoặc rollback trong vận hành LLM:** Prompt version giúp truy lại cấu hình của từng request; label production cho phép promote/rollback mà không sửa nội dung version cũ. Token/cost giúp tìm request đắt và đánh giá tác động thay đổi prompt. SLO xác định chất lượng dịch vụ cần giữ; error budget lượng hóa phần request chậm/lỗi được phép. Rollback chỉ phù hợp khi thay đổi prompt gây vấn đề; với CP3 này cần xử lý retrieval.
+- **Điều quan trọng nhất đã học:** HTTP 200 và retrieval success 100% không đồng nghĩa trải nghiệm tốt. Phải xem tail latency và span duration; TTFT của generation không bao gồm thời gian retrieval, còn agent latency chưa bao gồm toàn bộ queue wait ở HTTP.
+- **Hạn chế hoặc phần chưa hoàn thành, nếu có:** Dùng mock LLM/retrieval, cost là ước tính và quality là heuristic. Chưa triển khai alert engine/Slack delivery hoặc xác nhận SLO 28 ngày. Route async còn gọi tác vụ blocking, có thể tăng queue wait. CP1–CP3 và hồ sơ CP4/evidence 01–14 đã có; lấy SHA commit cuối trên main và tự nộp LMS. Các đoạn tự đánh giá ở đây dựa trên kết quả kỹ thuật; học viên cần đọc và có thể giải thích khi demo.
 
 ## 9. Checklist trước khi nộp
 
-- [ ] Kết quả và evidence thuộc commit SHA cuối.
-- [ ] Tất cả ảnh/output mở được bằng đường dẫn tương đối.
-- [ ] Incident evidence nối đúng metric → log → trace.
-- [ ] Trace/prompt evidence thuộc project Langfuse cá nhân và ảnh không lộ key/secret.
-- [ ] Repository chạy lại được theo README.
-- [ ] Không có secret, API key, PII thô hoặc evidence của người khác/lớp khác.
+- [x] Source đã được kiểm chứng; hồ sơ báo cáo/evidence được đóng gói trong commit nộp trên main.
+- [x] Tất cả ảnh/output mở được bằng đường dẫn tương đối (kiểm tra file local).
+- [x] Incident evidence nối đúng metric → log → trace.
+- [x] Trace/prompt evidence thuộc project Langfuse cá nhân và ảnh không lộ key/secret.
+- [x] Suite tests và validators chạy được bằng `.venv/bin/python`; cách chạy app/dashboard đã được mô tả.
+- [x] File nộp không chứa keys/secret của `.env`; file challenge/log runtime/venv được gitignore. PII giả chỉ nằm trong fixtures/evidence kiểm chứng redaction; log validator không phát hiện leak.
 - [ ] URL repo và commit SHA cuối đã được nộp trên LMS/Codelabs.

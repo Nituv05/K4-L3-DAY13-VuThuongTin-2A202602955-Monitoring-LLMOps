@@ -1,3 +1,6 @@
+Command: .venv/bin/python scripts/validate_logs.py
+Checked source revision: 4abbf203e5eb972161b73108edbdb48872c1a481
+
 --- Lab Verification Results ---
 Total log records analyzed: 93
 Records with missing required fields: 0

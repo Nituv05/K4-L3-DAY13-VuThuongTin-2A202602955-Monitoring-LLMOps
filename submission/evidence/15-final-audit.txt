@@ -1,0 +1,13 @@
+CP4 final local audit — 2026-09-29T10:07:01.458532+00:00
+Checked source revision: 4abbf203e5eb972161b73108edbdb48872c1a481
+Pytest: 25 passed (see 01-pytest.txt).
+Log validator: 100/100, 93 records, 39 correlation IDs, 0 PII leaks.
+Dashboard validator: 6/6 panels.
+Report relative links: 24 checked, 0 missing.
+Required evidence: 01–14 present (16 files including companion screenshots).
+Text files checked for actual .env credentials / concrete Langfuse key strings: 94 candidates, 0 matches. Credential values were not printed.
+Protected files untracked and ignored: .env, config/challenge.json, config/K4-L3A-challenge.json, data/logs.jsonl, .venv/bin/python.
+Incident chain: metric/log/API trace share req-a7eae60b and ec779bdefc94672332ed8fc77ee6260b.
+Images: previously visually reviewed for required fields; this text scan does not OCR image pixels.
+Synthetic PII examples are retained only for redaction demonstration and test fixtures.
+Submission revision: the final report/evidence commit on origin/main. Obtain full SHA with git rev-parse HEAD after pushing. Tested source revision above is unchanged by the report/evidence commit.

@@ -1,1 +1,4 @@
+Command: .venv/bin/python scripts/validate_dashboard.py
+Checked source revision: 4abbf203e5eb972161b73108edbdb48872c1a481
+
 HỢP LỆ: 6/6 panel có trong dashboard contract.
