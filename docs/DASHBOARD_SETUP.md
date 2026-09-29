@@ -21,7 +21,13 @@ Giữ time range mặc định 60 phút, refresh 30 giây và hiển thị thres
 
 1. Hoàn thiện logging/PII và chạy API.
 2. Chạy `python scripts/load_test.py --concurrency 5` để tạo baseline.
-3. Dùng `data/logs.jsonl` làm nguồn chuẩn để tạo đúng sáu panel bằng Streamlit, notebook, Grafana hoặc công cụ tương đương. Langfuse vẫn là nơi mở trace/prompt version để điều tra sâu.
+3. Dùng `data/logs.jsonl` làm nguồn chuẩn để tạo đúng sáu panel. Repo có dashboard local chạy bằng Python standard library:
+
+   ```bash
+   python scripts/dashboard.py
+   ```
+
+   Mở `http://127.0.0.1:8765`. Trang đọc log trong cửa sổ 60 phút, hiển thị đúng sáu panel và tự tải lại mỗi 30 giây. Có thể xuất một HTML snapshot bằng `python scripts/dashboard.py --output /tmp/day13-dashboard.html`. Langfuse vẫn là nơi mở trace/prompt version để điều tra sâu.
 4. Đặt tên panel, đơn vị và threshold giống contract.
 5. Chạy validator:
 

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-from contextlib import contextmanager
+from contextlib import contextmanager, nullcontext
 from typing import Any
 
 try:
@@ -40,3 +40,15 @@ def tracing_enabled() -> bool:
     return LANGFUSE_SDK_AVAILABLE and bool(
         os.getenv("LANGFUSE_PUBLIC_KEY") and os.getenv("LANGFUSE_SECRET_KEY")
     )
+
+
+class _NoopObservation:
+    def update(self, **kwargs: Any) -> None:
+        return None
+
+
+def observation_scope(client: Any, *, enabled: bool, **kwargs: Any):
+    """Create an SDK v4 observation when tracing is configured, else a no-op."""
+    if not enabled:
+        return nullcontext(_NoopObservation())
+    return client.start_as_current_observation(**kwargs)

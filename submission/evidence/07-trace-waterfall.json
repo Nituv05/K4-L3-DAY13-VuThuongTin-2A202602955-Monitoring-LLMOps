@@ -1,0 +1,128 @@
+{
+  "trace_id": "ee9e40d5fd90b71af62de3e2e71036d7",
+  "observations": [
+    {
+      "id": "e024bab792852a61",
+      "trace_id": "ee9e40d5fd90b71af62de3e2e71036d7",
+      "parent_observation_id": "b88149ad4c5ea51d",
+      "type": "GENERATION",
+      "name": "llm-generation",
+      "session_id": "cp2-7cc64389c7",
+      "user_id": "57ff819cce76",
+      "project_id": "cmumd4c8t1zpdad0cke1owi6g",
+      "start_time": "2026-09-29 08:31:00.924000+00:00",
+      "end_time": "2026-09-29 08:31:01.082000+00:00",
+      "model": "claude-sonnet-4-5",
+      "prompt_name": "day13-chat",
+      "prompt_version": 1,
+      "usage_details": {
+        "input": 44,
+        "output": 148,
+        "total": 192
+      },
+      "cost_details": {
+        "input": 0.000132,
+        "output": 0.00222,
+        "total": 0.002352
+      },
+      "total_cost": 0.002352,
+      "metadata": {
+        "correlation_id": "req-e7abd347",
+        "model": "claude-sonnet-4-5",
+        "ttft_ms": 54,
+        "feature": "qa",
+        "scope.version": "4.15.6",
+        "scope.name": "langfuse-sdk",
+        "resourceAttributes.service.name": "unknown_service:python",
+        "resourceAttributes.service.instance.id": "3b54a345-16d8-4660-9e7d-f197b192cf70",
+        "resourceAttributes.telemetry.sdk.version": "1.45.0",
+        "resourceAttributes.telemetry.sdk.name": "opentelemetry",
+        "resourceAttributes.telemetry.sdk.language": "python"
+      },
+      "input": {
+        "prompt_name": "day13-chat",
+        "prompt_label": "production",
+        "prompt_version": "1",
+        "prompt_source": "langfuse"
+      },
+      "output": {
+        "output_char_count": 133
+      }
+    },
+    {
+      "id": "dfa3bab1d0a70fe5",
+      "trace_id": "ee9e40d5fd90b71af62de3e2e71036d7",
+      "parent_observation_id": "b88149ad4c5ea51d",
+      "type": "RETRIEVER",
+      "name": "retrieval",
+      "session_id": "cp2-7cc64389c7",
+      "user_id": "57ff819cce76",
+      "project_id": "cmumd4c8t1zpdad0cke1owi6g",
+      "start_time": "2026-09-29 08:31:00.296000+00:00",
+      "end_time": "2026-09-29 08:31:00.296000+00:00",
+      "model": "",
+      "prompt_name": "",
+      "prompt_version": null,
+      "usage_details": {},
+      "cost_details": {},
+      "total_cost": null,
+      "metadata": {
+        "correlation_id": "req-e7abd347",
+        "model": "claude-sonnet-4-5",
+        "duration_ms": 0,
+        "feature": "qa",
+        "scope.version": "4.15.6",
+        "scope.name": "langfuse-sdk",
+        "resourceAttributes.service.name": "unknown_service:python",
+        "resourceAttributes.service.instance.id": "3b54a345-16d8-4660-9e7d-f197b192cf70",
+        "resourceAttributes.telemetry.sdk.version": "1.45.0",
+        "resourceAttributes.telemetry.sdk.name": "opentelemetry",
+        "resourceAttributes.telemetry.sdk.language": "python"
+      },
+      "input": {
+        "query_char_count": 62
+      },
+      "output": {
+        "document_count": 1
+      }
+    },
+    {
+      "id": "b88149ad4c5ea51d",
+      "trace_id": "ee9e40d5fd90b71af62de3e2e71036d7",
+      "parent_observation_id": null,
+      "type": "AGENT",
+      "name": "lab-agent-run",
+      "session_id": "cp2-7cc64389c7",
+      "user_id": "57ff819cce76",
+      "project_id": "cmumd4c8t1zpdad0cke1owi6g",
+      "start_time": "2026-09-29 08:31:00.295000+00:00",
+      "end_time": "2026-09-29 08:31:01.082000+00:00",
+      "model": "",
+      "prompt_name": "",
+      "prompt_version": null,
+      "usage_details": {},
+      "cost_details": {},
+      "total_cost": null,
+      "metadata": {
+        "correlation_id": "req-e7abd347",
+        "model": "claude-sonnet-4-5",
+        "feature": "qa",
+        "prompt_fetch_error": "",
+        "prompt_source": "langfuse",
+        "prompt_version": 1,
+        "prompt_label": "production",
+        "prompt_name": "day13-chat",
+        "doc_count": 1,
+        "scope.version": "4.15.6",
+        "scope.name": "langfuse-sdk",
+        "resourceAttributes.service.name": "unknown_service:python",
+        "resourceAttributes.service.instance.id": "3b54a345-16d8-4660-9e7d-f197b192cf70",
+        "resourceAttributes.telemetry.sdk.version": "1.45.0",
+        "resourceAttributes.telemetry.sdk.name": "opentelemetry",
+        "resourceAttributes.telemetry.sdk.language": "python"
+      },
+      "input": null,
+      "output": null
+    }
+  ]
+}

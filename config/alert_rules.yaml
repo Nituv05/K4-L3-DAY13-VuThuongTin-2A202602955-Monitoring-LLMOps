@@ -1,25 +1,28 @@
 alerts:
-  - name: TODO_alert_1
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: User-facing latency is above the SLO
+    severity: warning
+    condition: latency_p95_ms > 3000
+    duration: 5m
     type: symptom-based
-    channel: slack
-    owner: TODO
+    channel: '#day13-llmops-alerts'
+    channel_type: slack
+    owner: llmops-oncall
     runbook: docs/alerts.md#alert-1
-  - name: TODO_alert_2
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: Chat request error rate is elevated
+    severity: critical
+    condition: error_rate_pct > 2
+    duration: 5m
     type: symptom-based
-    channel: slack
-    owner: TODO
+    channel: '#day13-llmops-alerts'
+    channel_type: slack
+    owner: llmops-oncall
     runbook: docs/alerts.md#alert-2
-  - name: TODO_alert_3
-    severity: TODO
-    condition: TODO
-    duration: TODO
+  - name: Retrieval success is below the guardrail
+    severity: warning
+    condition: retrieval_success_rate_pct < 90
+    duration: 5m
     type: symptom-based
-    channel: slack
-    owner: TODO
+    channel: '#day13-llmops-alerts'
+    channel_type: slack
+    owner: llmops-oncall
     runbook: docs/alerts.md#alert-3

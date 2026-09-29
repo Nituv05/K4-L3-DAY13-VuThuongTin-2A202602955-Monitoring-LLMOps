@@ -7,7 +7,11 @@ primary_slo:
     total_event: 'event == "request_received"'
   target_percent: 99.5
   error_budget_percent: 0.5
-  note: Học viên phải giải thích hoặc điều chỉnh ngưỡng bằng baseline của mình.
+  note: >-
+    99.5% good requests in a rolling 28-day window means a 0.5% error budget.
+    For N request_received events, allowed bad requests = N * 0.005 (e.g. 5 per
+    1,000). A request is good only when it reaches response_sent within 3,000 ms;
+    failures and slower responses consume the budget.
 guardrails:
   error_rate_pct_max: 2
   daily_cost_usd_max: 2.5

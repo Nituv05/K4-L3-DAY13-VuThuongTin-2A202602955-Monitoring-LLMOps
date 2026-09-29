@@ -1,0 +1,38 @@
+<html><head><meta charset='utf-8'><style>body{font:18px system-ui;background:#0b1425;color:#eef3ff;padding:40px}h1{font-size:30px}h2{font-size:22px}p{color:#bdcbe2}table{width:100%;border-collapse:collapse;font-size:15px}td,th{text-align:left;padding:12px;border-bottom:1px solid #33445f}.card{background:#152238;border:1px solid #33445f;border-radius:15px;padding:24px;margin:24px 0}.row{display:grid;grid-template-columns:120px 1fr 130px;gap:15px;margin:25px 0}.track{position:relative;background:#25364f;height:30px}.track i{display:block;background:#a878ff;height:100%}.track em{position:absolute;left:50%;height:42px;top:-6px;border-left:3px solid #ffcc6e}code,pre{font-size:16px}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style></head><body><h1>CP3 — Actual structured log excerpt</h1><p>Source: data/logs.jsonl · day13-k4-l3a-monitoring-llmops-v1</p><p>Trace ID: ec779bdefc94672332ed8fc77ee6260b · Correlation ID: req-a7eae60b</p><div class='card'><pre>{
+  &quot;service&quot;: &quot;api&quot;,
+  &quot;payload&quot;: {
+    &quot;message_preview&quot;: &quot;Summarize the observability workflow for an AI API.&quot;
+  },
+  &quot;event&quot;: &quot;request_received&quot;,
+  &quot;feature&quot;: &quot;monitoring&quot;,
+  &quot;correlation_id&quot;: &quot;req-a7eae60b&quot;,
+  &quot;user_id_hash&quot;: &quot;dc9b2ec8da9d&quot;,
+  &quot;session_id&quot;: &quot;k4-l3a-challenge-s03&quot;,
+  &quot;env&quot;: &quot;dev&quot;,
+  &quot;model&quot;: &quot;claude-sonnet-4-5&quot;,
+  &quot;level&quot;: &quot;info&quot;,
+  &quot;ts&quot;: &quot;2026-09-29T09:47:37.421143Z&quot;
+}
+{
+  &quot;service&quot;: &quot;api&quot;,
+  &quot;latency_ms&quot;: 3372,
+  &quot;ttft_ms&quot;: 54,
+  &quot;tokens_in&quot;: 35,
+  &quot;tokens_out&quot;: 116,
+  &quot;cost_usd&quot;: 0.001845,
+  &quot;quality_score&quot;: 0.8,
+  &quot;tool_name&quot;: &quot;retrieval&quot;,
+  &quot;tool_success&quot;: true,
+  &quot;payload&quot;: {
+    &quot;answer_preview&quot;: &quot;Starter answer. You should improve this output logic and add better quality chec...&quot;
+  },
+  &quot;event&quot;: &quot;response_sent&quot;,
+  &quot;feature&quot;: &quot;monitoring&quot;,
+  &quot;correlation_id&quot;: &quot;req-a7eae60b&quot;,
+  &quot;user_id_hash&quot;: &quot;dc9b2ec8da9d&quot;,
+  &quot;session_id&quot;: &quot;k4-l3a-challenge-s03&quot;,
+  &quot;env&quot;: &quot;dev&quot;,
+  &quot;model&quot;: &quot;claude-sonnet-4-5&quot;,
+  &quot;level&quot;: &quot;info&quot;,
+  &quot;ts&quot;: &quot;2026-09-29T09:47:40.795693Z&quot;
+}</pre></div></body></html>

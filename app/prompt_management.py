@@ -45,7 +45,8 @@ def resolve_prompt(
                 label=label,
                 type="text",
                 fallback=DEFAULT_PROMPT_TEMPLATE,
-                cache_ttl_seconds=60,
+                # Make label promotion/rollback visible immediately in this lab.
+                cache_ttl_seconds=0,
                 fetch_timeout_seconds=2,
                 max_retries=0,
             )

@@ -1,0 +1,79 @@
+{
+  "traces": [
+    {
+      "trace_id": "77313eb5f30800755abf1a37019d099c",
+      "correlation_id": "req-2f517c3d",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "13ad06930ab56a7b2adbaabc21424d87",
+      "correlation_id": "req-a5366430",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "bc6f305c73db6692a04578824f0182ee",
+      "correlation_id": "req-c81e0e45",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "61a03ef6f32f487c28e6be730bb275ca",
+      "correlation_id": "req-b02e4542",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "5abcf06aa6ceddb6f4bbe74e42fc9af6",
+      "correlation_id": "req-1657d616",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "af2e7f695a6399fc48a403a89d6bf983",
+      "correlation_id": "req-cb9e03ac",
+      "retrieval_ms": 2506.0
+    },
+    {
+      "trace_id": "ec779bdefc94672332ed8fc77ee6260b",
+      "correlation_id": "req-a7eae60b",
+      "retrieval_ms": 2506.0
+    },
+    {
+      "trace_id": "5090f43df6000711c0cc7089f3612f94",
+      "correlation_id": "req-e0212c52",
+      "retrieval_ms": 2504.0
+    },
+    {
+      "trace_id": "3f13d9e8104ea068aec0c2fbcb21e941",
+      "correlation_id": "req-5280036f",
+      "retrieval_ms": 2504.0
+    },
+    {
+      "trace_id": "27fadd4b1040945f8f29182274c3051d",
+      "correlation_id": "req-8d4c2c82",
+      "retrieval_ms": 2505.0
+    },
+    {
+      "trace_id": "eacb2e660860284574a771728ff5777d",
+      "correlation_id": "req-a0b17d8f",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "fd65899f670646769b92733ca1a15b18",
+      "correlation_id": "req-edba07c8",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "f1b1b267c072dc1c0a67ef6617919322",
+      "correlation_id": "req-a6cfc005",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "e46e6a946005ce49b17fc89e921c3fda",
+      "correlation_id": "req-fcd27489",
+      "retrieval_ms": 0.0
+    },
+    {
+      "trace_id": "eaa0384930fe89de47e8e7a7a9760216",
+      "correlation_id": "req-48069689",
+      "retrieval_ms": 0.0
+    }
+  ]
+}

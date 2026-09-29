@@ -1,0 +1,56 @@
+[
+  {
+    "phase": "baseline",
+    "start": "2026-09-29T09:47:24.780753+00:00",
+    "end": "2026-09-29T09:47:28.251736+00:00",
+    "cumulative_metrics": {
+      "traffic": 5,
+      "latency_p50": 452.0,
+      "latency_p95": 1458.0,
+      "latency_p99": 1458.0,
+      "ttft_p95": 54.0,
+      "avg_cost_usd": 0.0023,
+      "total_cost_usd": 0.0115,
+      "tokens_in_total": 175,
+      "tokens_out_total": 734,
+      "error_breakdown": {},
+      "quality_avg": 0.84
+    }
+  },
+  {
+    "phase": "incident",
+    "start": "2026-09-29T09:47:28.372735+00:00",
+    "end": "2026-09-29T09:47:43.825934+00:00",
+    "cumulative_metrics": {
+      "traffic": 10,
+      "latency_p50": 2965.0,
+      "latency_p95": 3372.0,
+      "latency_p99": 3372.0,
+      "ttft_p95": 55.0,
+      "avg_cost_usd": 0.002,
+      "total_cost_usd": 0.0203,
+      "tokens_in_total": 350,
+      "tokens_out_total": 1281,
+      "error_breakdown": {},
+      "quality_avg": 0.84
+    }
+  },
+  {
+    "phase": "recovery",
+    "start": "2026-09-29T09:47:43.968606+00:00",
+    "end": "2026-09-29T09:47:46.924168+00:00",
+    "cumulative_metrics": {
+      "traffic": 15,
+      "latency_p50": 523.0,
+      "latency_p95": 3372.0,
+      "latency_p99": 3372.0,
+      "ttft_p95": 55.0,
+      "avg_cost_usd": 0.0021,
+      "total_cost_usd": 0.0315,
+      "tokens_in_total": 525,
+      "tokens_out_total": 1992,
+      "error_breakdown": {},
+      "quality_avg": 0.84
+    }
+  }
+]

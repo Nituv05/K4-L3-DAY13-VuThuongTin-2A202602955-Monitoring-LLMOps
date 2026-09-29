@@ -9,3 +9,6 @@ data/audit.jsonl
 config/challenge.json
 .pytest_cache/
 .antigravity/
+
+# Original CP3 file copied locally; keep private.
+config/K4-L3A-challenge.json

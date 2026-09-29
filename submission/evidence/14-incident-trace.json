@@ -1,0 +1,108 @@
+{
+  "source": "Langfuse V2 observations API",
+  "trace_id": "ec779bdefc94672332ed8fc77ee6260b",
+  "correlation_id": "req-a7eae60b",
+  "trace_url": "https://cloud.langfuse.com/project/cmumd4c8t1zpdad0cke1owi6g/traces/ec779bdefc94672332ed8fc77ee6260b",
+  "observations": [
+    {
+      "id": "c5ce102791700855",
+      "trace_id": "ec779bdefc94672332ed8fc77ee6260b",
+      "parent_observation_id": "34f15b2a93216539",
+      "name": "llm-generation",
+      "type": "GENERATION",
+      "start_time": "2026-09-29 09:47:40.638000+00:00",
+      "end_time": "2026-09-29 09:47:40.795000+00:00",
+      "session_id": "k4-l3a-challenge-s03",
+      "model": "claude-sonnet-4-5",
+      "prompt_name": "day13-chat",
+      "prompt_version": 1,
+      "usage_details": {
+        "input": 35,
+        "output": 116,
+        "total": 151
+      },
+      "cost_details": {
+        "input": 0.000105,
+        "output": 0.00174,
+        "total": 0.001845
+      },
+      "metadata": {
+        "correlation_id": "req-a7eae60b",
+        "model": "claude-sonnet-4-5",
+        "ttft_ms": 54,
+        "feature": "monitoring",
+        "scope.version": "4.15.6",
+        "scope.name": "langfuse-sdk",
+        "resourceAttributes.service.name": "unknown_service:python",
+        "resourceAttributes.service.instance.id": "729f8a1b-06ee-4eac-b795-0d6caccd6a48",
+        "resourceAttributes.telemetry.sdk.version": "1.45.0",
+        "resourceAttributes.telemetry.sdk.name": "opentelemetry",
+        "resourceAttributes.telemetry.sdk.language": "python"
+      },
+      "latency": 0.157
+    },
+    {
+      "id": "2525e909a1da08e9",
+      "trace_id": "ec779bdefc94672332ed8fc77ee6260b",
+      "parent_observation_id": "34f15b2a93216539",
+      "name": "retrieval",
+      "type": "RETRIEVER",
+      "start_time": "2026-09-29 09:47:37.423000+00:00",
+      "end_time": "2026-09-29 09:47:39.929000+00:00",
+      "session_id": "k4-l3a-challenge-s03",
+      "model": "",
+      "prompt_name": "",
+      "prompt_version": null,
+      "usage_details": {},
+      "cost_details": {},
+      "metadata": {
+        "correlation_id": "req-a7eae60b",
+        "model": "claude-sonnet-4-5",
+        "duration_ms": 2505.47,
+        "feature": "monitoring",
+        "scope.version": "4.15.6",
+        "scope.name": "langfuse-sdk",
+        "resourceAttributes.service.name": "unknown_service:python",
+        "resourceAttributes.service.instance.id": "729f8a1b-06ee-4eac-b795-0d6caccd6a48",
+        "resourceAttributes.telemetry.sdk.version": "1.45.0",
+        "resourceAttributes.telemetry.sdk.name": "opentelemetry",
+        "resourceAttributes.telemetry.sdk.language": "python"
+      },
+      "latency": 2.506
+    },
+    {
+      "id": "34f15b2a93216539",
+      "trace_id": "ec779bdefc94672332ed8fc77ee6260b",
+      "parent_observation_id": null,
+      "name": "lab-agent-run",
+      "type": "AGENT",
+      "start_time": "2026-09-29 09:47:37.422000+00:00",
+      "end_time": "2026-09-29 09:47:40.795000+00:00",
+      "session_id": "k4-l3a-challenge-s03",
+      "model": "",
+      "prompt_name": "",
+      "prompt_version": null,
+      "usage_details": {},
+      "cost_details": {},
+      "metadata": {
+        "correlation_id": "req-a7eae60b",
+        "model": "claude-sonnet-4-5",
+        "feature": "monitoring",
+        "prompt_fetch_error": "",
+        "prompt_source": "langfuse",
+        "prompt_version": 1,
+        "prompt_label": "production",
+        "prompt_name": "day13-chat",
+        "doc_count": 1,
+        "scope.version": "4.15.6",
+        "scope.name": "langfuse-sdk",
+        "resourceAttributes.service.name": "unknown_service:python",
+        "resourceAttributes.service.instance.id": "729f8a1b-06ee-4eac-b795-0d6caccd6a48",
+        "resourceAttributes.telemetry.sdk.version": "1.45.0",
+        "resourceAttributes.telemetry.sdk.name": "opentelemetry",
+        "resourceAttributes.telemetry.sdk.language": "python"
+      },
+      "latency": 3.373
+    }
+  ]
+}

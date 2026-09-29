@@ -1,26 +1,8 @@
-Pre-cleanup result on the existing mixed log file (42 records):
 --- Lab Verification Results ---
-Total log records analyzed: 42
-Records with missing required fields: 20
-Records with missing enrichment (context): 20
-Unique correlation IDs found: 10
-Potential PII leaks detected: 0
-
---- Grading Scorecard (Estimates) ---
-- [FAILED] Missing required fields (ts, level, etc.)
-+ [PASSED] Correlation ID propagation
-- [FAILED] Log enrichment (missing user_id_hash, etc.)
-+ [PASSED] PII scrubbing
-
-Estimated Score: 50/100
-
-Fresh CP1 workload after rotating the older records (20 records):
-$ python scripts/validate_logs.py
---- Lab Verification Results ---
-Total log records analyzed: 20
+Total log records analyzed: 93
 Records with missing required fields: 0
 Records with missing enrichment (context): 0
-Unique correlation IDs found: 10
+Unique correlation IDs found: 39
 Potential PII leaks detected: 0
 
 --- Grading Scorecard (Estimates) ---

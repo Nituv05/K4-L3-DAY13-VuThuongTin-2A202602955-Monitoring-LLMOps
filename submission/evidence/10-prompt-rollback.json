@@ -1,0 +1,177 @@
+{
+  "prompt_name": "day13-chat",
+  "current_production_version": 1,
+  "production_traces": [
+    {
+      "trace_id": "ee9e40d5fd90b71af62de3e2e71036d7",
+      "correlation_id": "req-e7abd347",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 148,
+        "total": 192
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.00222,
+        "total": 0.002352
+      }
+    },
+    {
+      "trace_id": "391065fd7efd375b14fb5587cd7f83ce",
+      "correlation_id": "req-1db64c6b",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 155,
+        "total": 199
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.002325,
+        "total": 0.002457
+      }
+    },
+    {
+      "trace_id": "556457d312b26cf68c54620284498fec",
+      "correlation_id": "req-b1a21f1e",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 120,
+        "total": 164
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.0018,
+        "total": 0.001932
+      }
+    },
+    {
+      "trace_id": "f8abce36b609fc1c0249e602b924679a",
+      "correlation_id": "req-993522f0",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 115,
+        "total": 159
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.001725,
+        "total": 0.001857
+      }
+    },
+    {
+      "trace_id": "086d7bf494d0720a99a780f0243f8ecc",
+      "correlation_id": "req-13c8850b",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 152,
+        "total": 196
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.00228,
+        "total": 0.002412
+      }
+    },
+    {
+      "trace_id": "bc0b06b5f3cd3a836ad404fcaecb92b3",
+      "correlation_id": "req-453942c3",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 174,
+        "total": 218
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.00261,
+        "total": 0.002742
+      }
+    },
+    {
+      "trace_id": "862b05225b557179d0a43a0909dad2aa",
+      "correlation_id": "req-b9c5b8e3",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 143,
+        "total": 187
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.002145,
+        "total": 0.002277
+      }
+    },
+    {
+      "trace_id": "846ee5e67224f12acc198513fe1c9b99",
+      "correlation_id": "req-3eb64248",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 161,
+        "total": 205
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.002415,
+        "total": 0.002547
+      }
+    },
+    {
+      "trace_id": "203b9de5790c9cac4de87d808a4f7c6f",
+      "correlation_id": "req-7882d44d",
+      "prompt_version": 1,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 44,
+        "output": 114,
+        "total": 158
+      },
+      "cost": {
+        "input": 0.000132,
+        "output": 0.00171,
+        "total": 0.001841999999
+      }
+    },
+    {
+      "trace_id": "6bc0575df6a149ff4c6a1a2808f04cea",
+      "correlation_id": "req-b70c7878",
+      "prompt_version": 2,
+      "prompt_label": "production",
+      "model": "claude-sonnet-4-5",
+      "usage": {
+        "input": 61,
+        "output": 83,
+        "total": 144
+      },
+      "cost": {
+        "input": 0.000183,
+        "output": 0.001245,
+        "total": 0.001428
+      }
+    }
+  ],
+  "transition": "production v1 -> v2 -> v1"
+}
