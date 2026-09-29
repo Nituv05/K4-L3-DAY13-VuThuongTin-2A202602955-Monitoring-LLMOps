@@ -4,11 +4,12 @@
 
 ## 1. Thông tin học viên
 
-- **Họ và tên:** Vu Thuong Tin (theo tên repository; dùng tên không dấu).
+- **Họ và tên:** Vũ Thường Tín (theo thông tin tác giả Git).
 - **MSSV:** `2A202602955`
 - **Lớp:** K4-L3A
-- **Repository URL:** [https://github.com/Nituv05/K4-L3A-Day13-VuThuongTin-2A202602955-Monitoring-LLMOps](https://github.com/Nituv05/K4-L3A-Day13-VuThuongTin-2A202602955-Monitoring-LLMOps)
-- **Commit nộp cuối:** [Commit mới nhất trên main](https://github.com/Nituv05/K4-L3A-Day13-VuThuongTin-2A202602955-Monitoring-LLMOps/commit/main). Copy full SHA tại trang commit này hoặc chạy `git rev-parse HEAD` sau khi push.
+- **Repository URL:** [https://github.com/Nituv05/K4-L3-DAY13-VuThuongTin-2A202602955-Monitoring-LLMOps](https://github.com/Nituv05/K4-L3-DAY13-VuThuongTin-2A202602955-Monitoring-LLMOps)
+- **Commit nộp cuối:** [Commit mới nhất trên main](https://github.com/Nituv05/K4-L3-DAY13-VuThuongTin-2A202602955-Monitoring-LLMOps/commit/main). Copy full SHA tại trang commit này hoặc chạy `git rev-parse HEAD` sau khi push.
+- **SHA hồ sơ đã push và kiểm chứng:** `8266579273dc015a2d8296693a786b6ef765ead3` (chứa đầy đủ evidence 01–14; commit sau cập nhật thông tin báo cáo).
 - **SHA source đã kiểm chứng:** `4abbf203e5eb972161b73108edbdb48872c1a481` (25 tests pass; commit hồ sơ cuối bổ sung báo cáo/evidence, không đổi source). SHA của chính commit chứa báo cáo không thể được nhúng vào nội dung báo cáo trước khi tạo commit.
 - **Challenge ID:** `day13-k4-l3a-monitoring-llmops-v1`
 - **Tên project Langfuse cá nhân:** `day13-k4-l3a-2A202602955`
